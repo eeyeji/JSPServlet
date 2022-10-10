@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>login</title>
+</head>
+<body>
+<!-- 창 크기에 따라 사이즈 조절 되는 법
+	style의 width height의 값을 px 혹은 % 말고 vh vw로 쓰면 윈도우 크기에 따라 비례하여 나타남 -->
+<fieldset style="width:250px; height:100px; text-align : center">
+<legend>로그인</legend>
+<form action="loginProcess.jsp" method="post">
+아이디: <input size = "15" type="text" name="id" placeholder="아이디를 입력하세요"><br>
+비밀번호: <input size = "15" type="password" name="pwd" placeholder="비밀번호를 입력하세요"><br>
+<!-- 줄간격 -->
+<span style = "line-height: 50px"></span>
+<input type="submit" value="로그인">
+</form>
+</fieldset>
+</body>
+</html>
