@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Fail</title>
 </head>
 <body>
 
 <div style="width:300px; height:200px;border:1px solid gray; text-align:center">
-<p>·Î±×ÀÎ Á¤º¸¸¦ ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä.</p>
-<a href="login.html">·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿</a>
+<p>ë¡œê·¸ì¸ ì •ë³´ë¥¼ ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”.</p>
+<a href="login.html">ë¡œê·¸ì¸ íŽ˜ì´ì§€ë¡œ ì´ë™</a>
 </div>
 
 </body>

@@ -1,30 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>loginProcess</title>
 </head>
 <body>
 
 <%
-	//0.id pw °¡Á®¿À±â 
+	//0.id pw ê°€ì ¸ì˜¤ê¸° 
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
 	
-	//1.È¸¿øÀÌ¸é ¼º°øÆäÀÌÁö·Î °¡±â(succes.jsp) id: smart pw:1234
-	if((id.equals("smart"))&&(pwd.equals("1234"))){
- 
-		String name = "È«±æµ¿";
-		//request¸¦ sessionÀ¸·Î ¹Ù²ãÁÖ¾î¾ßÁö Àü´ÞÇØÁØ ÀÌ¸§°ªÀÌ °è¼ÓÇØ¼­ À¯Áö°¡ µÊ.
-		session.setAttribute("name", name);
-		
-		RequestDispatcher dispt = request.getRequestDispatcher("success.jsp");
-		dispt.forward(request, response);
+	//ì „ì†¡ ë°ì´í„°ê°€ ì—†ì„ ê²½ìš° í™•ì¸
+	if((id != null)&&(pwd != null)){
+		//1.íšŒì›ì´ë©´ ì„±ê³µíŽ˜ì´ì§€ë¡œ ê°€ê¸°(succes.jsp) id: smart pw:1234
+		if((id.equals("smart"))&&(pwd.equals("1234"))){
+	 
+			String name = "í™ê¸¸ë™";
+			
+			//request: í•œë²ˆë§Œ ì €ìž¥í•´ì¤Œ
+			//session: ì„œë²„ê°€ ì—´ë ¸ì„ë™ì•ˆ ê³„ì† ì €ìž¥í•´ì¤Œ
+			session.setAttribute("name", name);
+			
+			RequestDispatcher dispt = request.getRequestDispatcher("success.jsp");
+			dispt.forward(request, response);
+		}
+		else{
+			response.sendRedirect("fail.jsp");
+		}
 	}
 	else{
-		response.sendRedirect("fail.jsp");
+		response.sendRedirect("login.html");
 	}
 
 %>

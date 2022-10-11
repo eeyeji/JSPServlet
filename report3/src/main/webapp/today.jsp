@@ -1,24 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@page import="java.util.Calendar"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>¿À´ÃÀÇ ³¯Â¥</title>
+<meta charset="utf-8">
+<title>ì˜¤ëŠ˜ì˜ ë‚ ì§œ</title>
 </head>
 <body>
 
-<%-- <h3>¿À´ÃÀÇ ³¯Â¥´Â?</h3> --%>
+<%-- <h3>ì˜¤ëŠ˜ì˜ ë‚ ì§œëŠ”?</h3> --%>
 <%
 	Calendar cal = Calendar.getInstance();
 	int year = cal.get(Calendar.YEAR);
-	//Ä¶¸°´õ Á¤ÀÇ: ¿ùÀº 0ºÎÅÍ½ÃÀÛµÊ -> 1¿ù = 0¿ù 
-	//µû¶ó¼­ µû·Î +1À» ÇØÁÖ´Â °úÁ¤ ÇÊ¿ä
+	//ìº˜ë¦°ë” ì •ì˜: ì›”ì€ 0ë¶€í„°ì‹œìž‘ë¨ -> 1ì›” = 0ì›” 
+	//ë”°ë¼ì„œ ë”°ë¡œ +1ì„ í•´ì£¼ëŠ” ê³¼ì • í•„ìš”
 	int month = cal.get(Calendar.MONTH)+1;
 	int day = cal.get(Calendar.DATE);
 	
-	out.print(year + "³â " + month + "¿ù " + day + "ÀÏ");
+	out.print(year + "ë…„ " + month + "ì›” " + day + "ì¼");
 %>
 
 </body>
