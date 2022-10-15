@@ -37,14 +37,7 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
- 	<Resource name="jdbc/mysql" 
-      auth="Container" 
-      type="javax.sql.DataSource" 
-      maxWaitMillis="10000"
-      username="root" 
-      password="tbrs00002b" 
-      driverClassName="com.mysql.jdbc.Driver"
-      url="jdbc:mysql://localhost:3306/webdb"/>
+ 	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxWaitMillis="10000" name="jdbc/mysql" password="tbrs00002b" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/webdb" username="root"/>
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -160,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="report4" path="/report4" reloadable="true" source="org.eclipse.jst.jee.server:report4"/><Context docBase="day03" path="/day03" reloadable="true" source="org.eclipse.jst.jee.server:day03"/><Context docBase="day04" path="/day04" reloadable="true" source="org.eclipse.jst.jee.server:day04"/><Context docBase="homework" path="/homework" reloadable="true" source="org.eclipse.jst.jee.server:homework"/><Context docBase="day05" path="/day05" reloadable="true" source="org.eclipse.jst.jee.server:day05"/></Host>
+      <Context docBase="report4" path="/report4" reloadable="true" source="org.eclipse.jst.jee.server:report4"/><Context docBase="day03" path="/day03" reloadable="true" source="org.eclipse.jst.jee.server:day03"/><Context docBase="day04" path="/day04" reloadable="true" source="org.eclipse.jst.jee.server:day04"/><Context docBase="day05" path="/day05" reloadable="true" source="org.eclipse.jst.jee.server:day05"/></Host>
     </Engine>
   </Service>
 </Server>
